@@ -1,0 +1,41 @@
+<div class="common-view">
+  <div class="navbar-nav " *ngIf="!currentUser || currentUser.role == Role.Customer">
+    <div class="header-container"></div>
+    <div class="side-menu">
+      <div class="side-menu-type">
+        <span>Category</span>
+      </div>
+      <div class="side-menu-item">
+        <a class="nav-item nav-link "
+           routerLink="/category/0">
+          <i class="fas fa-mobile"></i>
+          SmartPhones, Gadgets
+        </a>
+      </div>
+      <div class="side-menu-item">
+        <a class="nav-item nav-link"
+           routerLink="/category/1">
+          <i class="fas fa-tv"></i>
+          TV, Audio, Video
+        </a>
+      </div>
+      <div class="side-menu-item">
+        <a class="nav-item nav-link "
+           routerLink="/category/2">
+          <i class="fas fa-gamepad"></i>
+          Everything for gamers
+        </a>
+      </div>
+      <div class="side-menu-item">
+        <a class="nav-item nav-link"
+           routerLink="/category/3">
+          <i class="fas fa-info"></i>
+          Other
+        </a>
+      </div>
+    </div>
+  </div>
+  <div style="width: 100%">
+    <ng-content></ng-content>
+  </div>
+</div>
